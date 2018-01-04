@@ -6,26 +6,24 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Inventory
+    public class Inventory
     {
         //member variables
-        public int cups;
-        public int cupsofsugar;
-        public int lemons;
-        public int icecubes;
+        private int cups;
+        private int cupsofsugar;
+        private int lemons;
+        private int icecubes;
 
 
         //constructor
         public Inventory()
         {
-            cups = 0;
-            cupsofsugar = 0;
-            lemons = 0;
-            icecubes = 0;
+
         }
 
         //member methods 
-        public void DisplayInventory()
+
+       /* public void DisplayInventory()
         {
             Console.WriteLine("{0} cups.", cups);
             Console.WriteLine("{0} lemons.", lemons);
@@ -33,6 +31,50 @@ namespace LemonadeStand
             Console.WriteLine("{0} ice cubes.",icecubes);
             Console.ReadKey();
         }
-
+        */
+        public int Cups
+        {
+            get
+            {
+                return cups;
+            }
+            set
+            {
+                cups = value;
+            }
+        }
+        public int CupsOfSugar
+        {
+            get
+            {
+                return cupsofsugar;
+            }
+            set
+            {
+                cupsofsugar = value;
+            }
+        }
+        public int Lemons
+        {
+            get
+            {
+                return lemons;
+            }
+            set
+            {
+                lemons = value;
+            }
+        }
+        public int IceCubes
+        {
+            get
+            {
+                return icecubes;
+            }
+            set
+            {
+                icecubes = value;
+            }
+        }
     }
 }

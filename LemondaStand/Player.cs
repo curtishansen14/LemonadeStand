@@ -6,15 +6,31 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Player
+    public class Player
     {
         //member variables
-        public Inventory supples; 
+        public Inventory inventory;
+        public float money;
 
         //constructor
+        public Player()
+        {
+            inventory = new Inventory();
+            money = 20.00f;
 
+        }
 
         //member methods 
-
+        public float Money
+        {
+            get
+            {
+                return money;
+            }
+            set
+            {
+                money = value;
+            }
+        }
     }
 }

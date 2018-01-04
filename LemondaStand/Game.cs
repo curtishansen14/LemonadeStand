@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Game
+   public class Game
     {
         //member variables
-        private Player Human;
-
+        Player user;
 
 
         //constructor
         public Game()
         {
-
+            user = new Player();
         }
 
         //member methods 
         public void RunGame()
         {
             UserInterface.DisplayInstructions();
-
+            UserInterface.Interface(user);
+            
         }
     }
 }
