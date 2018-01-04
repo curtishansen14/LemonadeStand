@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2015\Projects\LemondaStand\LemondaStand\bin\Debug\LemondaStand.exe.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\bin\Debug\LemondaStand.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\bin\Debug\LemondaStand.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\obj\Debug\LemonadeStand.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\obj\Debug\LemondaStand.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\obj\Debug\LemondaStand.pdb
