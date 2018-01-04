@@ -17,6 +17,7 @@ namespace LemonadeStand
 
         public static void DisplayInstructions()
         {
+            Console.WriteLine(" ");
             Console.WriteLine("  Let's Play Lemonade Stand");
             Console.WriteLine("  You are the proud owner of a Lemonade Stand.");
             Console.WriteLine("  You have 7 days to make as much money as possible.");
@@ -27,7 +28,7 @@ namespace LemonadeStand
 
         public static void Interface(Player user )
         {
-            Console.WriteLine("                                                ");
+            Console.WriteLine("  ");
             Console.WriteLine("  Cups: " + user.inventory.Cups);
             Console.WriteLine("  Cups of Sugar: " + user.inventory.CupsOfSugar);
             Console.WriteLine("  Lemons: " + user.inventory.Lemons);
@@ -35,5 +36,13 @@ namespace LemonadeStand
             Console.ReadKey();
         }
 
+        public static void DisplayCupPrices()
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("Which cup bundle would you like?");
+            Console.WriteLine(" 1. $2.00 for 50 cups");
+            Console.WriteLine(" 2. $2.25 for 75 cups");
+            Console.WriteLine(" 3. $3.00 for 100 cups");
+        }
     }
 }

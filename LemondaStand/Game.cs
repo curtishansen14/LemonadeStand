@@ -10,6 +10,7 @@ namespace LemonadeStand
     {
         //member variables
         Player user;
+        Random rnd = new Random();
 
 
         //constructor
@@ -25,5 +26,6 @@ namespace LemonadeStand
             UserInterface.Interface(user);
             
         }
+
     }
 }

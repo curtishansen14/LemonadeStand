@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         //member variables
         public Inventory inventory;
-        public float money;
+        private float money;
 
         //constructor
         public Player()

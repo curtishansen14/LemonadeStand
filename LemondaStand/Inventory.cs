@@ -9,10 +9,10 @@ namespace LemonadeStand
     public class Inventory
     {
         //member variables
-        private int cups;
-        private int cupsofsugar;
-        private int lemons;
-        private int icecubes;
+        private float cups;
+        private float cupsofsugar;
+        private float lemons;
+        private float icecubes;
 
 
         //constructor
@@ -23,16 +23,8 @@ namespace LemonadeStand
 
         //member methods 
 
-       /* public void DisplayInventory()
-        {
-            Console.WriteLine("{0} cups.", cups);
-            Console.WriteLine("{0} lemons.", lemons);
-            Console.WriteLine("{0} cups of sugar.", cupsofsugar);
-            Console.WriteLine("{0} ice cubes.",icecubes);
-            Console.ReadKey();
-        }
-        */
-        public int Cups
+
+        public float Cups
         {
             get
             {
@@ -43,7 +35,7 @@ namespace LemonadeStand
                 cups = value;
             }
         }
-        public int CupsOfSugar
+        public float CupsOfSugar
         {
             get
             {
@@ -54,7 +46,7 @@ namespace LemonadeStand
                 cupsofsugar = value;
             }
         }
-        public int Lemons
+        public float Lemons
         {
             get
             {
@@ -65,7 +57,7 @@ namespace LemonadeStand
                 lemons = value;
             }
         }
-        public int IceCubes
+        public float IceCubes
         {
             get
             {
