@@ -105,7 +105,7 @@ namespace LemonadeStand
             Console.WriteLine("4. return to Command Center");
         }
 
-        public static void offerInventory(Player user, Store store)
+        public static void offerInventory(Player user, Store store, Game game)
         {
             Console.WriteLine(" ");
             Console.WriteLine("What would you like to buy?");
@@ -118,31 +118,31 @@ namespace LemonadeStand
             //go to market? 
             //go to market will add Plus 1 to the daysEclipsed variable in game class
 
-            switch (store.GetUserInput())
+            switch (game.GetUserInput())
             {
                 case "c":
                     DisplayCupPrices();
-                    store.GetCupBundle(user);
+                    store.GetCupBundle(user, game);
                     break;
                 case "s":
                     DisplaySugarPrices();
-                    store.GetSugarBundle(user);
+                    store.GetSugarBundle(user, game);
                     break;
                 case "l":
                     DisplayLemonPrices();
-                    store.GetLemonBundle(user);
+                    store.GetLemonBundle(user, game);
                     break;
                 case "i":
                     DisplayIcePrices();
-                    store.GetIceBundle(user);
+                    store.GetIceBundle(user, game);
                     break;
                 case "e":
-                    CommandCenter(user);
+                    game.CommandCenter(user, store);
                     break;
                 default:
                     Console.WriteLine("Incorrect input. Please try again.");
                     Console.WriteLine("Be sure to use lower case");
-                    offerInventory(user, store);
+                    offerInventory(user, store, game);
                     break;
             }
         }

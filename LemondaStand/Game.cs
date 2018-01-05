@@ -27,19 +27,14 @@ namespace LemonadeStand
         }
 
         //member methods 
-        public void RunGame()
-        {
-            UserInterface.DisplayInstructions();
-            CommandCenter(user, store);
-        }
         
-        public void DayCycle()
+        public void RunGameCycle()
         {
             UserInterface.DisplayInstructions();
             while (daysElipsed < 7)
             {
                 CommandCenter(user, store);
-                UserInterface.offerInventory(user, store);
+                UserInterface.offerInventory(user, store, this);
 
 
             }
