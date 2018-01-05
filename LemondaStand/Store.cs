@@ -55,6 +55,7 @@ namespace LemonadeStand
 
         //member methods 
 
+         //This is an example of SOLID
         public string GetCupBundleChioce()
         {
             UserInterface.DisplayCupPrices();
@@ -63,6 +64,8 @@ namespace LemonadeStand
         }
 
         //Techincally not SOLID but we're rolling with it.
+        //Game needs option to skip this step
+
         public void GetCupBundle(Player user)
         {
             switch (GetCupBundleChioce())
@@ -73,11 +76,13 @@ namespace LemonadeStand
                     break;
                     
                 case "2":
-                    
+                    user.Money = user.Money - cupBundleTwoPrice;
+                    user.inventory.Cups = user.inventory.Cups + cupBundleTwo;
+                    break;
                 case "3":
-                   
-                case "0":
-                    
+                    user.Money = user.Money - cupBundleThree;
+                    user.inventory.Cups = user.inventory.Cups + cupBundleThree;
+                    break; 
                 default:
                     break;
                     

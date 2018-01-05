@@ -9,22 +9,23 @@ namespace LemonadeStand
    public class Game
     {
         //member variables
-        Player user;
         Random rnd = new Random();
+        Player user;
+        Store store;
 
 
         //constructor
         public Game()
         {
             user = new Player();
+            store = new Store();
         }
 
         //member methods 
         public void RunGame()
         {
             UserInterface.DisplayInstructions();
-            UserInterface.Interface(user);
-            
+            UserInterface.CommandCenter(user);
         }
 
     }

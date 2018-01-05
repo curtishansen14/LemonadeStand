@@ -26,13 +26,19 @@ namespace LemonadeStand
             Console.ReadKey();
         }
 
-        public static void Interface(Player user )
+        public static void CommandCenter(Player user )
         {
-            Console.WriteLine("  ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" *************** Command Center *************** ");
             Console.WriteLine("  Cups: " + user.inventory.Cups);
             Console.WriteLine("  Cups of Sugar: " + user.inventory.CupsOfSugar);
             Console.WriteLine("  Lemons: " + user.inventory.Lemons);
             Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
+            Console.WriteLine(" ");
+            Console.WriteLine(" Money " + user.Money);
+            Console.WriteLine(" Today is: ");
+            Console.WriteLine(" Todays forecase: ");
+
             Console.ReadKey();
         }
 
