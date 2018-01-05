@@ -14,6 +14,7 @@ namespace LemonadeStand
         Store store;
         Day day;
         private int daysElipsed;
+        private string userInput;
 
 
         //constructor
@@ -29,7 +30,7 @@ namespace LemonadeStand
         public void RunGame()
         {
             UserInterface.DisplayInstructions();
-            UserInterface.CommandCenter(user, store);
+            CommandCenter(user, store);
         }
         
         public void DayCycle()
@@ -37,8 +38,52 @@ namespace LemonadeStand
             UserInterface.DisplayInstructions();
             while (daysElipsed < 7)
             {
-                UserInterface.CommandCenter(user, store);
+                CommandCenter(user, store);
                 UserInterface.offerInventory(user, store);
+
+
+            }
+        }
+
+        public string GetUserInput()
+        {
+            userInput = Console.ReadLine();
+            return userInput;
+        }
+
+        public void CommandCenter(Player user, Store store)
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine(" *************** Command Center *************** ");
+            Console.WriteLine(" ");
+            Console.WriteLine("  Cups: " + user.inventory.Cups);
+            Console.WriteLine("  Cups of Sugar: " + user.inventory.CupsOfSugar);
+            Console.WriteLine("  Lemons: " + user.inventory.Lemons);
+            Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
+            Console.WriteLine(" ");
+            Console.WriteLine(" Money " + user.Money);
+            Console.WriteLine(" Today is: ");
+            Console.WriteLine(" Todays forecast: ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" Press G to begin");
+            Console.WriteLine(" Press S to go to the store.");
+            Console.WriteLine(" *************** ************** *************** ");
+            Console.ReadKey();
+
+            switch (GetUserInput())
+            {
+                case "g":
+                    //calls the customers 
+                    CommandCenter(user, store);
+                    break;
+                case "s":
+                    break;
+                case "p":
+                    //set price
+                    break;
+                case "r":
+                    // set recipe
+                    break;
 
 
             }

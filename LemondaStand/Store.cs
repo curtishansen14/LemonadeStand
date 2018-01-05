@@ -10,9 +10,6 @@ namespace LemonadeStand
     {
         //member variables
 
-        private int daysElipsed;
-
-        private string userInput;
 
         private float cupBundleOne;
         private float cupBundleTwo;
@@ -88,119 +85,113 @@ namespace LemonadeStand
 
         //member methods 
 
-         //This is an example of SOLID
-        public string GetUserInput()
-        {
-            userInput = Console.ReadLine();
-            return userInput;
-        }
-
         //Techincally not SOLID but we're rolling with it.
         //Game needs option to skip this step
 
-        public void GetCupBundle(Player user)
+        public void GetCupBundle(Player user, Game game)
         {
-            switch (GetUserInput())
+            switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - cupBundleOnePrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleOne;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                     
                 case "2":
                     user.Money = user.Money - cupBundleTwoPrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleTwo;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "3":
                     user.Money = user.Money - cupBundleThreePrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleThree;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "4":
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 default:
                     break;
                     
             }
         }
-        public void GetLemonBundle(Player user)
+        public void GetLemonBundle(Player user, Game game)
         {
-            switch (GetUserInput())
+            switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - lemonBundleOnePrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleOne;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
 
                 case "2":
                     user.Money = user.Money - lemonBundleTwoPrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleTwo;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
 
                 case "3":
                     user.Money = user.Money - lemonBundleThreePrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleThree;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "4":
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
             }
         }
 
-        public void GetSugarBundle(Player user)
+        public void GetSugarBundle(Player user, Game game)
         {
-            switch (GetUserInput())
+            switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - sugarBundleOnePrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleOne;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "2":
                     user.Money = user.Money - sugarBundleTwoPrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleTwo;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "3":
                     user.Money = user.Money - sugarBundleThreePrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleThree;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "4":
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
             }
         }
 
-        public void GetIceBundle(Player user)
+        public void GetIceBundle(Player user, Game game)
         {
-            switch (GetUserInput())
+            switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - iceBundleOnePrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleOne;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "2":
                     user.Money = user.Money - iceBundleTwoPrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleTwo;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "3":
                     user.Money = user.Money - iceBundleThreePrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleThree;
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
                 case "4":
-                    UserInterface.CommandCenter(user);
+                    game.CommandCenter(user, this);
                     break;
             }
         }
+        
     }
 }

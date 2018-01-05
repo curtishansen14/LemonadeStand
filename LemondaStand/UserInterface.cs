@@ -26,44 +26,44 @@ namespace LemonadeStand
             Console.ReadKey();
         }
 
-        public static void CommandCenter(Player user, Store store)
-        {
-            Console.WriteLine(" ");
-            Console.WriteLine(" *************** Command Center *************** ");
-            Console.WriteLine(" ");
-            Console.WriteLine("  Cups: " + user.inventory.Cups);
-            Console.WriteLine("  Cups of Sugar: " + user.inventory.CupsOfSugar);
-            Console.WriteLine("  Lemons: " + user.inventory.Lemons);
-            Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
-            Console.WriteLine(" ");
-            Console.WriteLine(" Money " + user.Money);
-            Console.WriteLine(" Today is: ");
-            Console.WriteLine(" Todays forecast: ");
-            Console.WriteLine(" ");
-            Console.WriteLine(" Press G to begin");
-            Console.WriteLine(" Press S to go to the store.");
-            Console.WriteLine(" *************** ************** *************** ");
-            Console.ReadKey();
+        //public static void CommandCenter(Player user, Store store)
+        //{
+        //    Console.WriteLine(" ");
+        //    Console.WriteLine(" *************** Command Center *************** ");
+        //    Console.WriteLine(" ");
+        //    Console.WriteLine("  Cups: " + user.inventory.Cups);
+        //    Console.WriteLine("  Cups of Sugar: " + user.inventory.CupsOfSugar);
+        //    Console.WriteLine("  Lemons: " + user.inventory.Lemons);
+        //    Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
+        //    Console.WriteLine(" ");
+        //    Console.WriteLine(" Money " + user.Money);
+        //    Console.WriteLine(" Today is: ");
+        //    Console.WriteLine(" Todays forecast: ");
+        //    Console.WriteLine(" ");
+        //    Console.WriteLine(" Press G to begin");
+        //    Console.WriteLine(" Press S to go to the store.");
+        //    Console.WriteLine(" *************** ************** *************** ");
+        //    Console.ReadKey();
 
-            switch (store.GetUserInput())
-            {
-                case "g":
-                    //calls the customers 
-                    store.
-                    CommandCenter(user, store);
-                    break;
-                case "s":
-                    break;
-                case "p":
-                    //set price
-                    break;
-                case "r":
-                    // set recipe
-                    break;
+        //    switch (store.GetUserInput())
+        //    {
+        //        case "g":
+        //            //calls the customers 
+        //            store.
+        //            CommandCenter(user, store);
+        //            break;
+        //        case "s":
+        //            break;
+        //        case "p":
+        //            //set price
+        //            break;
+        //        case "r":
+        //            // set recipe
+        //            break;
 
                     
-            }
-        }
+        //    }
+        //}
 
         public static void DisplayCupPrices()
         {
