@@ -12,6 +12,8 @@ namespace LemonadeStand
         Random rnd = new Random();
         Player user;
         Store store;
+        Day day;
+        private int daysElipsed;
 
 
         //constructor
@@ -19,16 +21,39 @@ namespace LemonadeStand
         {
             user = new Player();
             store = new Store();
+            day = new Day();
+            daysElipsed = 0;
         }
 
         //member methods 
         public void RunGame()
         {
             UserInterface.DisplayInstructions();
-            UserInterface.CommandCenter(user);
-            
-            
+            UserInterface.CommandCenter(user, store);
         }
+        
+        public void DayCycle()
+        {
+            UserInterface.DisplayInstructions();
+            while (daysElipsed < 7)
+            {
+                UserInterface.CommandCenter(user, store);
+                UserInterface.offerInventory(user, store);
 
+
+            }
+        }
+        public int DaysElipsed
+        {
+            get
+            {
+                return daysElipsed;
+            }
+            set
+            {
+                daysElipsed = value;
+            }
+        }
+       
     }
 }

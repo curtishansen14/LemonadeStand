@@ -9,7 +9,8 @@ namespace LemonadeStand
     public class Store
     {
         //member variables
-        private Inventory marketplace;
+
+        private int daysElipsed;
 
         private string userInput;
 
@@ -67,7 +68,6 @@ namespace LemonadeStand
             lemonBundleTwoPrice = 2.25f;
             lemonBundleThreePrice = 3.00f;
 
-            sugarBundleOne = 10f;
             sugarBundleTwo = 15f;
             sugarBundleThree = 25f;
 

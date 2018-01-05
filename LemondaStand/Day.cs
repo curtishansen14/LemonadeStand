@@ -9,7 +9,7 @@ namespace LemonadeStand
     class Day
     {
         //member variables
-
+        private int daysElipsed;
 
         //constructor
 
