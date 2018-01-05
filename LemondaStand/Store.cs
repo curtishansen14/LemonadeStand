@@ -11,7 +11,7 @@ namespace LemonadeStand
         //member variables
         private Inventory marketplace;
 
-        private string cupBundle;
+        private string userInput;
 
         private float cupBundleOne;
         private float cupBundleTwo;
@@ -49,11 +49,7 @@ namespace LemonadeStand
         //constructor
         public Store()
         {
-            marketplace = new Inventory();
-            marketplace.Cups = 1000;
-            marketplace.CupsOfSugar = 1000;
-            marketplace.Lemons = 1000;
-            marketplace.IceCubes = 10000;
+
 
             cupBundleOnePrice = 2.00f;
             cupBundleTwoPrice = 2.25f;
@@ -93,11 +89,10 @@ namespace LemonadeStand
         //member methods 
 
          //This is an example of SOLID
-        public string GetCupBundleChoice()
+        public string GetUserInput()
         {
-            UserInterface.DisplayCupPrices();
-            cupBundle = Console.ReadLine();
-            return cupBundle;
+            userInput = Console.ReadLine();
+            return userInput;
         }
 
         //Techincally not SOLID but we're rolling with it.
@@ -105,21 +100,27 @@ namespace LemonadeStand
 
         public void GetCupBundle(Player user)
         {
-            switch (GetCupBundleChoice())
+            switch (GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - cupBundleOnePrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleOne;
+                    UserInterface.CommandCenter(user);
                     break;
                     
                 case "2":
                     user.Money = user.Money - cupBundleTwoPrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleTwo;
+                    UserInterface.CommandCenter(user);
                     break;
                 case "3":
                     user.Money = user.Money - cupBundleThreePrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleThree;
-                    break; 
+                    UserInterface.CommandCenter(user);
+                    break;
+                case "4":
+                    UserInterface.CommandCenter(user);
+                    break;
                 default:
                     break;
                     
@@ -127,59 +128,77 @@ namespace LemonadeStand
         }
         public void GetLemonBundle(Player user)
         {
-            switch (GetCupBundleChoice())
+            switch (GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - lemonBundleOnePrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleOne;
+                    UserInterface.CommandCenter(user);
                     break;
 
                 case "2":
                     user.Money = user.Money - lemonBundleTwoPrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleTwo;
+                    UserInterface.CommandCenter(user);
                     break;
 
                 case "3":
                     user.Money = user.Money - lemonBundleThreePrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleThree;
-                    break; 
+                    UserInterface.CommandCenter(user);
+                    break;
+                case "4":
+                    UserInterface.CommandCenter(user);
+                    break;
             }
         }
 
         public void GetSugarBundle(Player user)
         {
-            switch (GetCupBundleChoice())
+            switch (GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - sugarBundleOnePrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleOne;
+                    UserInterface.CommandCenter(user);
                     break;
                 case "2":
                     user.Money = user.Money - sugarBundleTwoPrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleTwo;
+                    UserInterface.CommandCenter(user);
                     break;
                 case "3":
                     user.Money = user.Money - sugarBundleThreePrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleThree;
+                    UserInterface.CommandCenter(user);
+                    break;
+                case "4":
+                    UserInterface.CommandCenter(user);
                     break;
             }
         }
 
         public void GetIceBundle(Player user)
         {
-            switch (GetCupBundleChoice())
+            switch (GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - iceBundleOnePrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleOne;
+                    UserInterface.CommandCenter(user);
                     break;
                 case "2":
                     user.Money = user.Money - iceBundleTwoPrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleTwo;
+                    UserInterface.CommandCenter(user);
                     break;
                 case "3":
                     user.Money = user.Money - iceBundleThreePrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleThree;
+                    UserInterface.CommandCenter(user);
+                    break;
+                case "4":
+                    UserInterface.CommandCenter(user);
                     break;
             }
         }

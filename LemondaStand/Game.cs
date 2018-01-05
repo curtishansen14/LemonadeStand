@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
    public class Game
     {
-        //member variables
+        //member variables (HAS A)
         Random rnd = new Random();
         Player user;
         Store store;
@@ -26,6 +26,8 @@ namespace LemonadeStand
         {
             UserInterface.DisplayInstructions();
             UserInterface.CommandCenter(user);
+            
+            
         }
 
     }
