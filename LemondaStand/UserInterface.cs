@@ -30,6 +30,7 @@ namespace LemonadeStand
         {
             Console.WriteLine(" ");
             Console.WriteLine(" *************** Command Center *************** ");
+            Console.WriteLine(" ");
             Console.WriteLine("  Cups: " + user.inventory.Cups);
             Console.WriteLine("  Cups of Sugar: " + user.inventory.CupsOfSugar);
             Console.WriteLine("  Lemons: " + user.inventory.Lemons);
@@ -37,7 +38,9 @@ namespace LemonadeStand
             Console.WriteLine(" ");
             Console.WriteLine(" Money " + user.Money);
             Console.WriteLine(" Today is: ");
-            Console.WriteLine(" Todays forecase: ");
+            Console.WriteLine(" Todays forecast: ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" *************** ************** *************** ");
 
             Console.ReadKey();
         }
@@ -49,6 +52,16 @@ namespace LemonadeStand
             Console.WriteLine(" 1. $2.00 for 50 cups");
             Console.WriteLine(" 2. $2.25 for 75 cups");
             Console.WriteLine(" 3. $3.00 for 100 cups");
+        }
+        public static void offerInventory()
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("What would you like to buy?");
+            Console.WriteLine("C for cups");
+            Console.WriteLine("S for sugar");
+            Console.WriteLine("L for lemons");
+            Console.WriteLine("I for ice");
+
         }
     }
 }

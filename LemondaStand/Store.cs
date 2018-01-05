@@ -33,6 +33,10 @@ namespace LemonadeStand
         private float cupBundleTwoPrice;
         private float cupBundleThreePrice;
 
+        private float lemonBundleOnePrice;
+        private float lemonBundleTwoPrice;
+        private float lemonBundleThreePrice;
+
         private string NOREDLINE;
 
 
@@ -86,6 +90,26 @@ namespace LemonadeStand
                 default:
                     break;
                     
+            }
+        }
+        public void GetLemonBundle(Player user)
+        {
+            switch (GetCupBundleChioce())
+            {
+                case "1":
+                    user.Money = user.Money - lemonBundleOnePrice;
+                    user.inventory.Lemons = user.inventory.Lemons + lemonBundleOne;
+                    break;
+
+                case "2":
+                    user.Money = user.Money - lemonBundleTwoPrice;
+                    user.inventory.Lemons = user.inventory.Lemons + lemonBundleTwo;
+                    break;
+
+                case "3":
+                    user.Money = user.Money - lemonBundleThreePrice;
+                    user.inventory.Lemons = user.inventory.Lemons + lemonBundleThree;
+                    break; 
             }
         }
     }
