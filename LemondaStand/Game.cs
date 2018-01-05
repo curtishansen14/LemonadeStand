@@ -31,10 +31,11 @@ namespace LemonadeStand
         public void RunGameCycle()
         {
             UserInterface.DisplayInstructions();
+
             while (daysElipsed < 7)
             {
                 CommandCenter(user, store);
-                UserInterface.offerInventory(user, store, this);
+                // UserInterface.offerInventory(user, store, this);
 
 
             }
@@ -69,9 +70,11 @@ namespace LemonadeStand
             {
                 case "g":
                     //calls the customers 
+                    turnEarth();
                     CommandCenter(user, store);
                     break;
                 case "s":
+                    UserInterface.offerInventory(user, store, this);
                     break;
                 case "p":
                     //set price
@@ -79,20 +82,25 @@ namespace LemonadeStand
                 case "r":
                     // set recipe
                     break;
+                default:
+                    Console.WriteLine("Please try again");
+                    Console.WriteLine("Be sure to use lower case");
+                    break;
 
 
             }
         }
+
+        public void turnEarth()
+        {
+            daysElipsed = daysElipsed++;
+        }
         public int DaysElipsed
         {
             get
-            {
-                return daysElipsed;
-            }
+            {return daysElipsed;}
             set
-            {
-                daysElipsed = value;
-            }
+            {daysElipsed = value;}
         }
        
     }
