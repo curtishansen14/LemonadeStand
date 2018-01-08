@@ -72,10 +72,10 @@ namespace LemonadeStand
         {
             Console.WriteLine(" ");
             Console.WriteLine("What would you like to buy?");
-            Console.WriteLine("C for cups");
             Console.WriteLine("S for sugar");
             Console.WriteLine("L for lemons");
             Console.WriteLine("I for ice");
+            Console.WriteLine("C for cups");
             Console.WriteLine("E to exist to Command Center");
             
 

@@ -22,7 +22,7 @@ namespace LemonadeStand
         {
             user = new Player();
             store = new Store();
-            day = new Day();
+            day = new Day(rnd);
             daysElipsed = 0;
         }
 
@@ -32,7 +32,7 @@ namespace LemonadeStand
         {
             UserInterface.DisplayInstructions();
 
-            while (daysElipsed < 7)
+            for (int DaysElipsed = 0; DaysElipsed < 7; DaysElipsed++)
             {
                 CommandCenter(user, store);
                 // UserInterface.offerInventory(user, store, this);
@@ -58,13 +58,13 @@ namespace LemonadeStand
             Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
             Console.WriteLine(" ");
             Console.WriteLine(" Money " + user.Money);
-            Console.WriteLine(" Today is: ");
+            Console.WriteLine(" Today is day: " + daysElipsed);
             Console.WriteLine(" Todays forecast: ");
             Console.WriteLine(" ");
             Console.WriteLine(" Press G to begin");
             Console.WriteLine(" Press S to go to the store.");
             Console.WriteLine(" *************** ************** *************** ");
-            Console.ReadKey();
+            
 
             switch (GetUserInput())
             {
