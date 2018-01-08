@@ -83,19 +83,19 @@ namespace LemonadeStand
             {
                 case "c":
                     DisplayCupPrices();
-                    store.GetCupBundle(user, game, day);
+                    store.GetCupBundle(user, game, day, weather);
                     break;
                 case "s":
                     DisplaySugarPrices();
-                    store.GetSugarBundle(user, game, day);
+                    store.GetSugarBundle(user, game, day, weather);
                     break;
                 case "l":
                     DisplayLemonPrices();
-                    store.GetLemonBundle(user, game, day);
+                    store.GetLemonBundle(user, game, day, weather);
                     break;
                 case "i":
                     DisplayIcePrices();
-                    store.GetIceBundle(user, game, day);
+                    store.GetIceBundle(user, game, day, weather);
                     break;
                 case "e":
                     game.CommandCenter(user, store, day, weather);
