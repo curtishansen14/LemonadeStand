@@ -37,6 +37,8 @@ namespace LemonadeStand
             weather.GetConditions(day);
             for (int i = 0; i<= 2; i++)
             {
+                //get daily forcast
+                //get daily weather
                 CommandCenter(user, store, day);
                 Console.WriteLine("Day change");
 
@@ -62,8 +64,8 @@ namespace LemonadeStand
             Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
             Console.WriteLine(" ");
             Console.WriteLine(" Money " + user.Money);
-            Console.WriteLine(" Today is day: " + daysElipsed);
-            Console.WriteLine(" Todays forecast: " + day.ForecastedTemperature );
+            Console.WriteLine(" Today is day: "); //need to display day);
+            Console.WriteLine(" Todays forecast: " + day.GenerateForecastedTemperature() );
             Console.WriteLine(" ");
             Console.WriteLine(" Press G to begin");
             Console.WriteLine(" Press S to go to the store.");
