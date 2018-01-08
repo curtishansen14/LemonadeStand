@@ -9,8 +9,8 @@ namespace LemonadeStand
     class Day
     {
         //member variables
-        private int forecast;
-        private int temperature;
+        private int skyConditions;
+        private int foreCastedtemperature;
         private Weather Weather;
         private Customer customers;
         private Random random;
@@ -22,43 +22,43 @@ namespace LemonadeStand
         }
 
         //member methods 
-        public int getForecast()
+        public int GenerateForecast()
         {
-            forecast = random.Next(1, 6);
-            return forecast;
+            skyConditions = random.Next(1, 6);
+            return skyConditions;
         }
-
-        public int getTemperature()
+        
+        public int GetForecastedTemperature()
         {
-            temperature = random.Next(60, 101);
-            return temperature;
+            foreCastedtemperature = random.Next(60, 101);
+            return foreCastedtemperature;
         }
         //public int getWeather()
         //{
         //    Weather = random.Next()
         //}
-        public int displayForeCast()
+        public int GetForeCast()
         {
-            switch (getForecast())
+            switch (GenerateForecast())
             {
                 case 1:
                     Console.WriteLine("Forecast: Rain");
-                    return forecast;
+                    return skyConditions;
 
                 case 2:
                     Console.WriteLine("Forcast: Overcast");
-                    return forecast;
+                    return skyConditions;
                 case 3:
                     Console.WriteLine("Forecast: Partly Cloudy");
-                    return forecast;
+                    return skyConditions;
                 case 4:
                     Console.WriteLine("Forecast: Clear Skys");
-                    return forecast;
+                    return skyConditions;
                 case 5:
                     Console.WriteLine("Forecast: Sunny");
-                    return forecast;
+                    return skyConditions;
                 default:
-                    return forecast;
+                    return skyConditions;
             }
         }
     }
