@@ -24,7 +24,7 @@ namespace LemonadeStand
             user = new Player();
             store = new Store();
             day = new Day(rnd);
-            weather = new Weather();
+            weather = new Weather(rnd);
             daysElipsed = 0;
         }
 

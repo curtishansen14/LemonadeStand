@@ -38,7 +38,7 @@ namespace LemonadeStand
 
         public int GetForeCast()
         {
-            switch (GenerateForecast())
+            switch (skyConditions)
             {
                 case 1:
                     Console.WriteLine("Forecast: Rain");
