@@ -39,8 +39,14 @@ namespace LemonadeStand
             {
                 //get daily forcast
                 //get daily weather
+                Console.WriteLine(" ");
+                Console.WriteLine("^^^^^^^Weather Forecast^^^^^^^^^");
+                Console.WriteLine(" ");
+                Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature() + " and " + day.GenerateForecast());
+                Console.WriteLine(" ");
+                Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
                 CommandCenter(user, store, day, weather);
-                Console.WriteLine("Day change");
+                Console.WriteLine(" Day change");
 
             }
 
@@ -64,7 +70,6 @@ namespace LemonadeStand
             Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
             Console.WriteLine(" ");
             Console.WriteLine(" Money " + user.Money);
-            Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature() + " and " + day.GenerateForecast());
             Console.WriteLine(" ");
             Console.WriteLine(" Press G to begin");
             Console.WriteLine(" Press S to go to the store.");
@@ -76,8 +81,11 @@ namespace LemonadeStand
                 case "g":
                     weather.GetWeather(day);
                     Console.WriteLine(" ");
+                    Console.WriteLine("----------------------------------------------");
                     Console.WriteLine(" Lets go to market");
                     Console.WriteLine(" Today's weather " + weather.ActualWeather + " degrees" );
+                    Console.WriteLine(" ");
+                    Console.WriteLine("----------------------------------------------");
                     //call customers aka go to market
                     return;
                 case "s":
