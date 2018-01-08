@@ -34,7 +34,7 @@ namespace LemonadeStand
 
             for (int DaysElipsed = 0; DaysElipsed < 7; DaysElipsed++)
             {
-                CommandCenter(user, store);
+                CommandCenter(user, store, day);
                 // UserInterface.offerInventory(user, store, this);
 
 
@@ -47,7 +47,7 @@ namespace LemonadeStand
             return userInput;
         }
 
-        public void CommandCenter(Player user, Store store)
+        public void CommandCenter(Player user, Store store, Day day)
         {
             Console.WriteLine(" ");
             Console.WriteLine(" *************** Command Center *************** ");
@@ -59,7 +59,7 @@ namespace LemonadeStand
             Console.WriteLine(" ");
             Console.WriteLine(" Money " + user.Money);
             Console.WriteLine(" Today is day: " + daysElipsed);
-            Console.WriteLine(" Todays forecast: ");
+            Console.WriteLine(" Todays forecast: " + day.ForecastedTemperature );
             Console.WriteLine(" ");
             Console.WriteLine(" Press G to begin");
             Console.WriteLine(" Press S to go to the store.");
@@ -71,10 +71,10 @@ namespace LemonadeStand
                 case "g":
                     //calls the customers 
                     turnEarth();
-                    CommandCenter(user, store);
+                    CommandCenter(user, store, day);
                     break;
                 case "s":
-                    UserInterface.offerInventory(user, store, this);
+                    UserInterface.offerInventory(user, store, this, day);
                     break;
                 case "p":
                     //set price

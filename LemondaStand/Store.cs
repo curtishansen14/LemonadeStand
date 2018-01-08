@@ -89,107 +89,107 @@ namespace LemonadeStand
         //Techincally not SOLID but we're rolling with it.
         //Game needs option to skip this step
 
-        public void GetCupBundle(Player user, Game game)
+        public void GetCupBundle(Player user, Game game, Day day)
         {
             switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - cupBundleOnePrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleOne;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                     
                 case "2":
                     user.Money = user.Money - cupBundleTwoPrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleTwo;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "3":
                     user.Money = user.Money - cupBundleThreePrice;
                     user.inventory.Cups = user.inventory.Cups + cupBundleThree;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "4":
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 default:
                     break;
                     
             }
         }
-        public void GetLemonBundle(Player user, Game game)
+        public void GetLemonBundle(Player user, Game game, Day day)
         {
             switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - lemonBundleOnePrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleOne;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
 
                 case "2":
                     user.Money = user.Money - lemonBundleTwoPrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleTwo;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
 
                 case "3":
                     user.Money = user.Money - lemonBundleThreePrice;
                     user.inventory.Lemons = user.inventory.Lemons + lemonBundleThree;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "4":
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
             }
         }
 
-        public void GetSugarBundle(Player user, Game game)
+        public void GetSugarBundle(Player user, Game game, Day day)
         {
             switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - sugarBundleOnePrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleOne;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "2":
                     user.Money = user.Money - sugarBundleTwoPrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleTwo;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "3":
                     user.Money = user.Money - sugarBundleThreePrice;
                     user.inventory.CupsOfSugar = user.inventory.CupsOfSugar + sugarBundleThree;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "4":
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
             }
         }
 
-        public void GetIceBundle(Player user, Game game)
+        public void GetIceBundle(Player user, Game game, Day day)
         {
             switch (game.GetUserInput())
             {
                 case "1":
                     user.Money = user.Money - iceBundleOnePrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleOne;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "2":
                     user.Money = user.Money - iceBundleTwoPrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleTwo;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "3":
                     user.Money = user.Money - iceBundleThreePrice;
                     user.inventory.IceCubes = user.inventory.IceCubes + iceBundleThree;
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
                 case "4":
-                    game.CommandCenter(user, this);
+                    game.CommandCenter(user, this, day);
                     break;
             }
         }

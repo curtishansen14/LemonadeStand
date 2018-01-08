@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Day
+    public class Day
     {
         //member variables
         private int skyConditions;
@@ -35,10 +35,7 @@ namespace LemonadeStand
             foreCastedtemperature = random.Next(60, 101);
             return foreCastedtemperature;
         }
-        //public int getWeather()
-        //{
-        //    Weather = random.Next()
-        //}
+
         public int GetForeCast()
         {
             switch (GenerateForecast())
@@ -74,9 +71,9 @@ namespace LemonadeStand
             set { foreCastedtemperature = value; }
         }
 
-        public int GetFreCastedTemperature()
+        public void DisplayForeCastedTemperature()
         {
-
+            Console.WriteLine("Forecasted Temperature: " + ForecastedTemperature);
         }
     }
 
