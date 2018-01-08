@@ -13,6 +13,7 @@ namespace LemonadeStand
         Player user;
         Store store;
         Day day;
+        Weather weather;
         private int daysElipsed;
         private string userInput;
 
@@ -23,6 +24,7 @@ namespace LemonadeStand
             user = new Player();
             store = new Store();
             day = new Day(rnd);
+            weather = new Weather();
             daysElipsed = 0;
         }
 
@@ -31,8 +33,10 @@ namespace LemonadeStand
         public void RunGameCycle()
         {
             UserInterface.DisplayInstructions();
+            day.GetForeCast();
+            weather.GetConditions(day);
 
-            for (int DaysElipsed = 0; DaysElipsed < 7; DaysElipsed++)
+            while (DaysElipsed < 7)
             {
                 CommandCenter(user, store, day);
                 // UserInterface.offerInventory(user, store, this);

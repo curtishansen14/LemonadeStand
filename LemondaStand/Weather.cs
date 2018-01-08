@@ -11,13 +11,15 @@ namespace LemonadeStand
         //member variables
         private int conditions;
         private int weather;
-        private Random rnd;
+        private Random random;
 
         //constructor
-        public Weather()
+        public Weather(Random rnd)
         {
             conditions = 1;
             weather = 1;
+            random = rnd;
+            
         }
 
         //member methods 
@@ -32,27 +34,28 @@ namespace LemonadeStand
             set { weather = value; }
         }
 
-        private int GetConditions(Day day)
+        public int GetConditions(Day day)
         {
             switch (day.SkyConditions)
             {
                 case 1:
-                    conditions = rnd.Next(1, 3);
+
+                    conditions = random.Next(1, 3);
                     return conditions;
                 case 2:
-                    conditions = rnd.Next(1, 4);
+                    conditions = random.Next(1, 4);
                     return conditions;
                 case 3:
-                    conditions = rnd.Next(2, 5);
+                    conditions = random.Next(2, 5);
                     return conditions;
                 case 4:
-                    conditions = rnd.Next(3,6);
+                    conditions = random.Next(3,6);
                     return conditions;
                 case 5:
-                    conditions = rnd.Next(3, 6);
+                    conditions = random.Next(3, 6);
                     return conditions;
                 default:
-                    conditions = rnd.Next(1, 6);
+                    conditions = random.Next(1, 6);
                     return conditions;
 
             }
