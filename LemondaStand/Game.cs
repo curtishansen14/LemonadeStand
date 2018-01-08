@@ -74,11 +74,11 @@ namespace LemonadeStand
             switch (GetUserInput())
             {
                 case "g":
+                    weather.GetWeather(day);
                     Console.WriteLine(" ");
-                    Console.WriteLine("Lets go to market");
-                    Console.WriteLine("Today's weather " + weather.ActualWeather + "degrees" );
+                    Console.WriteLine(" Lets go to market");
+                    Console.WriteLine(" Today's weather " + weather.ActualWeather + " degrees" );
                     //call customers aka go to market
-                    //turnEarth();
                     return;
                 case "s":
                     UserInterface.offerInventory(user, store, this, day, weather);
@@ -98,29 +98,6 @@ namespace LemonadeStand
             }
         }
 
-        //public void turnEarth()
-        //{
-        //    daysElipsed = daysElipsed++;
-        //}
-        //public int DaysElipsed
-        //{
-        //    get
-        //    {return daysElipsed;}
-        //    set
-        //    {daysElipsed = value;}
-        //}
-       //public void DaysOfWeek()
-       // {
-       //     List<string> DaysOfWeek = new List<string>();
-       //     DaysOfWeek.Add("Sunday");
-       //     DaysOfWeek.Add("Monday");
-       //     DaysOfWeek.Add("Tuesday");
-       //     DaysOfWeek.Add("Wednesday");
-       //     DaysOfWeek.Add("Thursday");
-       //     DaysOfWeek.Add("Friday");
-       //     DaysOfWeek.Add("Saturday");
-
-
-       // }
+       
     }
 }

@@ -9,53 +9,54 @@ namespace LemonadeStand
     public class Weather
     {
         //member variables
-        private int conditions;
-        private double weather;
+      
+        private double actualWeather;
         private int weatherMultiplier;
         private Random random;
 
         //constructor
         public Weather(Random rnd)
         {
-            conditions = 1;
-            weather = 1;
+   
+            actualWeather = 44;
             weatherMultiplier = 0;
             random = rnd;
             
         }
 
         //member methods 
-        public int Conditions
-        {
-            get { return conditions; }
-            set { conditions = value; }
-        }
-        public double ActualWeather
-        {
-            get { return weather; }
-            set { weather = value; }
-        }
+
 
         public double GetWeather(Day day)
         {
+            GetWeatherMultiplier();
 
             if (weatherMultiplier == 1)
             {
-                ActualWeather = day.ForecastedTemperature * 1.1;
-                return ActualWeather;
+                actualWeather = day.ForecastedTemperature * 1.1;
+                return actualWeather;
             }
             else if (weatherMultiplier == 2)
             {
-                ActualWeather = day.ForecastedTemperature * .9;
-                return ActualWeather;
+                actualWeather = day.ForecastedTemperature * .9;
+                return actualWeather;
             }
             else
             {
-                ActualWeather = day.ForecastedTemperature;
-                return ActualWeather;
+                actualWeather = day.ForecastedTemperature;
+                return actualWeather;
             }
             
         }
+
+        public double ActualWeather
+        {
+            get { return actualWeather; }
+
+        }
+        
+
+
     public int GetWeatherMultiplier()
     {
         weatherMultiplier = random.Next(1, 2);
