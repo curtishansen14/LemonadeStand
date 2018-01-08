@@ -33,7 +33,7 @@ namespace LemonadeStand
         public void RunGameCycle()
         {
             UserInterface.DisplayInstructions();
-            day.GetForeCast();
+
             weather.GetConditions(day);
             for (int i = 0; i<= 2; i++)
             {
@@ -64,8 +64,7 @@ namespace LemonadeStand
             Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
             Console.WriteLine(" ");
             Console.WriteLine(" Money " + user.Money);
-            Console.WriteLine(" Today is day: "); //need to display day);
-            Console.WriteLine(" Todays forecast: " + day.GenerateForecastedTemperature() );
+            Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature() + " and " + day.GenerateForecast());
             Console.WriteLine(" ");
             Console.WriteLine(" Press G to begin");
             Console.WriteLine(" Press S to go to the store.");
@@ -76,6 +75,7 @@ namespace LemonadeStand
             {
                 case "g":
                     Console.WriteLine("Today started");
+                    Console.WriteLine("Today's weather + " );
                     //call customers aka go to market
                     //turnEarth();
                     return;
@@ -97,17 +97,29 @@ namespace LemonadeStand
             }
         }
 
-        public void turnEarth()
-        {
-            daysElipsed = daysElipsed++;
-        }
-        public int DaysElipsed
-        {
-            get
-            {return daysElipsed;}
-            set
-            {daysElipsed = value;}
-        }
-       
+        //public void turnEarth()
+        //{
+        //    daysElipsed = daysElipsed++;
+        //}
+        //public int DaysElipsed
+        //{
+        //    get
+        //    {return daysElipsed;}
+        //    set
+        //    {daysElipsed = value;}
+        //}
+       //public void DaysOfWeek()
+       // {
+       //     List<string> DaysOfWeek = new List<string>();
+       //     DaysOfWeek.Add("Sunday");
+       //     DaysOfWeek.Add("Monday");
+       //     DaysOfWeek.Add("Tuesday");
+       //     DaysOfWeek.Add("Wednesday");
+       //     DaysOfWeek.Add("Thursday");
+       //     DaysOfWeek.Add("Friday");
+       //     DaysOfWeek.Add("Saturday");
+
+
+       // }
     }
 }

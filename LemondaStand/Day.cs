@@ -24,10 +24,17 @@ namespace LemonadeStand
         }
 
         //member methods 
-        public int GenerateForecast()
+        public string GenerateForecast()
         {
-            skyConditions = random.Next(1, 6);
-            return skyConditions;
+            int result;
+            List<string> skyConditions = new List<string>();
+            skyConditions.Add("Rain");
+            skyConditions.Add("Overcast");
+            skyConditions.Add("Partly Cloudy");
+            skyConditions.Add("Clear Skys");
+            skyConditions.Add("Sunny");
+            result = random.Next(0, skyConditions.Count - 1);
+            return skyConditions[result].ToString();
         }
         
         public int GenerateForecastedTemperature()
@@ -36,30 +43,31 @@ namespace LemonadeStand
             return foreCastedtemperature;
         }
 
-        public int GetForeCast()
-        {
-            switch (skyConditions)
-            {
-                case 1:
-                    Console.WriteLine("Forecast: Rain");
-                    return skyConditions;
+        //public int GetForeCast()
+        //{
+        //    switch (GenerateForecast() )
+        //    {
+        //        case 1:
+        //            Console.WriteLine(" Today's forecast Rain");
+        //            return skyConditions;
                     
-                case 2:
-                    Console.WriteLine("Forcast: Overcast");
-                    return skyConditions;
-                case 3:
-                    Console.WriteLine("Forecast: Partly Cloudy");
-                    return skyConditions;
-                case 4:
-                    Console.WriteLine("Forecast: Clear Skys");
-                    return skyConditions;
-                case 5:
-                    Console.WriteLine("Forecast: Sunny");
-                    return skyConditions;
-                default:
-                    return skyConditions;
-            }
-        }
+                    
+        //        case 2:
+        //            Console.WriteLine(" Today's forecast Overcast");
+        //            return skyConditions;
+        //        case 3:
+        //            Console.WriteLine(" Today's forecast Partly Cloudy");
+        //            return skyConditions;
+        //        case 4:
+        //            Console.WriteLine(" Today's forecast Clear Skys");
+        //            return skyConditions;
+        //        case 5:
+        //            Console.WriteLine(" Today's forecast Sunny");
+        //            return skyConditions;
+        //        default:
+        //            return skyConditions;
+        //    }
+        //}
         public int SkyConditions
         {
             get { return skyConditions; }
