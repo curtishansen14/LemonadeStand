@@ -34,7 +34,7 @@ namespace LemonadeStand
         {
             UserInterface.DisplayInstructions();
 
-            weather.GetConditions(day);
+            
             for (int i = 0; i<= 2; i++)
             {
                 //get daily forcast

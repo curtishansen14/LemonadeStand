@@ -37,7 +37,7 @@ namespace LemonadeStand
             return skyConditions[result].ToString();
         }
         
-        public int GenerateForecastedTemperature()
+        public double GenerateForecastedTemperature()
         {
             foreCastedtemperature = random.Next(60, 101);
             return foreCastedtemperature;

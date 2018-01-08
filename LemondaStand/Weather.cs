@@ -10,7 +10,8 @@ namespace LemonadeStand
     {
         //member variables
         private int conditions;
-        private int weather;
+        private double weather;
+        private int weatherMultiplier;
         private Random random;
 
         //constructor
@@ -18,6 +19,7 @@ namespace LemonadeStand
         {
             conditions = 1;
             weather = 1;
+            weatherMultiplier = 0;
             random = rnd;
             
         }
@@ -28,37 +30,36 @@ namespace LemonadeStand
             get { return conditions; }
             set { conditions = value; }
         }
-        public int ActualWeather
+        public double ActualWeather
         {
             get { return weather; }
             set { weather = value; }
         }
 
-        public int GetConditions(Day day)
+        public double GetWeather(Day day)
         {
-            switch (day.SkyConditions)
+
+            if (weatherMultiplier == 1)
             {
-                case 1:
-
-                    conditions = random.Next(1, 3);
-                    return conditions;
-                case 2:
-                    conditions = random.Next(1, 4);
-                    return conditions;
-                case 3:
-                    conditions = random.Next(2, 5);
-                    return conditions;
-                case 4:
-                    conditions = random.Next(3,6);
-                    return conditions;
-                case 5:
-                    conditions = random.Next(3, 6);
-                    return conditions;
-                default:
-                    conditions = random.Next(1, 6);
-                    return conditions;
-
+                ActualWeather = day.ForecastedTemperature * 1.1;
+                return ActualWeather;
             }
+            else if (weatherMultiplier == 2)
+            {
+                ActualWeather = day.ForecastedTemperature * .9;
+                return ActualWeather;
+            }
+            else
+            {
+                ActualWeather = day.ForecastedTemperature;
+                return ActualWeather;
+            }
+            
         }
+    public int GetWeatherMultiplier()
+    {
+        weatherMultiplier = random.Next(1, 2);
+        return weatherMultiplier;
+    }
     }
 }
