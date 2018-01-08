@@ -19,6 +19,8 @@ namespace LemonadeStand
         public Day(Random rnd)
         {
             random = rnd;
+            skyConditions = 0;
+            foreCastedtemperature = 0;
         }
 
         //member methods 
@@ -28,7 +30,7 @@ namespace LemonadeStand
             return skyConditions;
         }
         
-        public int GetForecastedTemperature()
+        public int GenerateForecastedTemperature()
         {
             foreCastedtemperature = random.Next(60, 101);
             return foreCastedtemperature;
@@ -61,5 +63,21 @@ namespace LemonadeStand
                     return skyConditions;
             }
         }
+        public int SkyConditions
+        {
+            get { return skyConditions; }
+            set { skyConditions = value; }
+        }
+        public int ForecastedTemperature
+        {
+            get { return foreCastedtemperature; }
+            set { foreCastedtemperature = value; }
+        }
+
+        public int GetFreCastedTemperature()
+        {
+
+        }
     }
+
 }
