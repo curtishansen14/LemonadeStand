@@ -39,7 +39,7 @@ namespace LemonadeStand
             {
                 //get daily forcast
                 //get daily weather
-                CommandCenter(user, store, day);
+                CommandCenter(user, store, day, weather);
                 Console.WriteLine("Day change");
 
             }
@@ -53,7 +53,7 @@ namespace LemonadeStand
             return userInput;
         }
 
-        public void CommandCenter(Player user, Store store, Day day)
+        public void CommandCenter(Player user, Store store, Day day, Weather weather)
         {
             Console.WriteLine(" ");
             Console.WriteLine(" *************** Command Center *************** ");
@@ -74,13 +74,14 @@ namespace LemonadeStand
             switch (GetUserInput())
             {
                 case "g":
-                    Console.WriteLine("Today started");
-                    Console.WriteLine("Today's weather + " );
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Lets go to market");
+                    Console.WriteLine("Today's weather " + weather.ActualWeather + "degrees" );
                     //call customers aka go to market
                     //turnEarth();
                     return;
                 case "s":
-                    UserInterface.offerInventory(user, store, this, day);
+                    UserInterface.offerInventory(user, store, this, day, weather);
                     break;
                 case "p":
                     //set price

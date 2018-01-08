@@ -68,7 +68,7 @@ namespace LemonadeStand
             Console.WriteLine("4. return to Command Center");
         }
 
-        public static void offerInventory(Player user, Store store, Game game, Day day)
+        public static void offerInventory(Player user, Store store, Game game, Day day, Weather weather)
         {
             Console.WriteLine(" ");
             Console.WriteLine("What would you like to buy?");
@@ -98,12 +98,12 @@ namespace LemonadeStand
                     store.GetIceBundle(user, game, day);
                     break;
                 case "e":
-                    game.CommandCenter(user, store, day);
+                    game.CommandCenter(user, store, day, weather);
                     break;
                 default:
                     Console.WriteLine("Incorrect input. Please try again.");
                     Console.WriteLine("Be sure to use lower case");
-                    offerInventory(user, store, game, day);
+                    offerInventory(user, store, game, day, weather);
                     break;
             }
         }
