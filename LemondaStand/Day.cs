@@ -43,7 +43,7 @@ namespace LemonadeStand
                 case 1:
                     Console.WriteLine("Forecast: Rain");
                     return skyConditions;
-
+                    
                 case 2:
                     Console.WriteLine("Forcast: Overcast");
                     return skyConditions;

@@ -29,20 +29,20 @@ namespace LemonadeStand
         }
 
         //member methods 
-        
+
         public void RunGameCycle()
         {
             UserInterface.DisplayInstructions();
             day.GetForeCast();
             weather.GetConditions(day);
-
-            while (DaysElipsed < 7)
+            for (int i = 0; i<= 2; i++)
             {
                 CommandCenter(user, store, day);
-                // UserInterface.offerInventory(user, store, this);
-
+                Console.WriteLine("Day change");
 
             }
+
+
         }
 
         public string GetUserInput()
@@ -73,10 +73,10 @@ namespace LemonadeStand
             switch (GetUserInput())
             {
                 case "g":
-                    //calls the customers 
-                    turnEarth();
-                    CommandCenter(user, store, day);
-                    break;
+                    Console.WriteLine("Today started");
+                    //call customers aka go to market
+                    //turnEarth();
+                    return;
                 case "s":
                     UserInterface.offerInventory(user, store, this, day);
                     break;
