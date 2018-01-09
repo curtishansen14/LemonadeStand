@@ -22,7 +22,7 @@ namespace LemonadeStand
         {
             user = new Player();
             store = new Store();
-            day = new Day();
+            day = new Day(random);
             weather = new Weather();
             random = new Random();
         }
@@ -38,14 +38,14 @@ namespace LemonadeStand
             {
                 //get daily forcast
                 //get daily weather
+                day = new Day(random);
                 Console.WriteLine(" ");
                 Console.WriteLine("^^^^^^^Weather Forecast^^^^^^^^^");
                 Console.WriteLine(" ");
-                Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature() + " and " + day.GenerateForecast(random));
+                Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature(random) + " and " + day.GenerateForecast(random));
                 Console.WriteLine(" ");
                 Console.WriteLine(" Day: " + ( i + 1));
                 Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-
                 CommandCenter(user, store, day, weather);
                 Console.WriteLine(" Day change");
 

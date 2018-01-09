@@ -11,13 +11,12 @@ namespace LemonadeStand
         //member variables
         private string skyConditions;
         private double foreCastedtemperature;
-        private Random random;
 
         //constructor
-        public Day()
+        public Day(Random random)
         {
             skyConditions = GenerateForecast(random);
-            foreCastedtemperature = GenerateForecastedTemperature();
+            foreCastedtemperature = GenerateForecastedTemperature(random);
         }
 
         //member methods 
@@ -34,7 +33,7 @@ namespace LemonadeStand
             return skyConditions[result].ToString();
         }
         
-        public double GenerateForecastedTemperature()
+        public double GenerateForecastedTemperature(Random random)
         {
             foreCastedtemperature = random.Next(60, 101);
             return foreCastedtemperature;
