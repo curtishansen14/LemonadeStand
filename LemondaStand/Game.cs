@@ -114,7 +114,6 @@ namespace LemonadeStand
                     Console.WriteLine("");
                     UserInterface.offerRecipeChange(user, store, this, day, weather);
                     CommandCenter(user, store, day, weather);
-                    // set recipe
                     break;
                 default:
                     Console.WriteLine("Please try again");

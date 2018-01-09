@@ -9,17 +9,15 @@ namespace LemonadeStand
     public class Day
     {
         //member variables
-        private int skyConditions;
+        private string skyConditions;
         private int foreCastedtemperature;
-        private Weather Weather;
-        private Customer customers;
         private Random random;
 
         //constructor
         public Day(Random rnd)
         {
             random = rnd;
-            skyConditions = 0;
+            skyConditions = GenerateForecast();
             foreCastedtemperature = 0;
         }
 
@@ -43,32 +41,8 @@ namespace LemonadeStand
             return foreCastedtemperature;
         }
 
-        //public int GetForeCast()
-        //{
-        //    switch (GenerateForecast() )
-        //    {
-        //        case 1:
-        //            Console.WriteLine(" Today's forecast Rain");
-        //            return skyConditions;
-                    
-                    
-        //        case 2:
-        //            Console.WriteLine(" Today's forecast Overcast");
-        //            return skyConditions;
-        //        case 3:
-        //            Console.WriteLine(" Today's forecast Partly Cloudy");
-        //            return skyConditions;
-        //        case 4:
-        //            Console.WriteLine(" Today's forecast Clear Skys");
-        //            return skyConditions;
-        //        case 5:
-        //            Console.WriteLine(" Today's forecast Sunny");
-        //            return skyConditions;
-        //        default:
-        //            return skyConditions;
-        //    }
-        //}
-        public int SkyConditions
+
+        public string SkyConditions
         {
             get { return skyConditions; }
             set { skyConditions = value; }
