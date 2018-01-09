@@ -14,9 +14,9 @@ namespace LemonadeStand
 
 
         //constructor
-        public Customer(Weather weather, Day day)
+        public Customer(Weather weather, Day day, Random random)
         {
-            purchasePoints = NeutralWillingnessToBuy();
+            purchasePoints = NeutralWillingnessToBuy(random);
             GetTemperatureEffect(weather);
             GetConditionsEffect(day);
         }
@@ -44,7 +44,7 @@ namespace LemonadeStand
         public double NeutralWillingnessToBuy(Random random)
         {
         purchasePoints = random.Next(50, 101);
-
+            
             return purchasePoints;
         }
 
