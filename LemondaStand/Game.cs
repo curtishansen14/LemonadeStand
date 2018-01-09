@@ -70,10 +70,12 @@ namespace LemonadeStand
             Console.WriteLine("  Lemons: " + user.inventory.Lemons);
             Console.WriteLine("  Ice Cubes: " + user.inventory.IceCubes);
             Console.WriteLine(" ");
-            Console.WriteLine(" Money " + user.Money);
+            Console.WriteLine(" Price $" + user.Price);
+            Console.WriteLine(" Money $" + user.Money);
             Console.WriteLine(" ");
             Console.WriteLine(" Press G to begin");
             Console.WriteLine(" Press S to go to the store.");
+            Console.WriteLine(" Press P to set price");
             Console.WriteLine(" *************** ************** *************** ");
             
 
@@ -95,6 +97,11 @@ namespace LemonadeStand
                 case "p":
                     Console.WriteLine(" ");
                     Console.WriteLine("Enter price of Lemonade");
+                    user.setPrice(this);
+                    UserInterface.DisplayPrice(user);
+                    Console.WriteLine(" ");
+                    CommandCenter(user, store, day, weather);
+
                     //set price
                     break;
                 case "r":

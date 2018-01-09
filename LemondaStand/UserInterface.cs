@@ -71,12 +71,12 @@ namespace LemonadeStand
         public static void offerInventory(Player user, Store store, Game game, Day day, Weather weather)
         {
             Console.WriteLine(" ");
-            Console.WriteLine("What would you like to buy?");
-            Console.WriteLine("S for sugar");
-            Console.WriteLine("L for lemons");
-            Console.WriteLine("I for ice");
-            Console.WriteLine("C for cups");
-            Console.WriteLine("E to exist to Command Center");
+            Console.WriteLine(" What would you like to buy?");
+            Console.WriteLine(" S for sugar");
+            Console.WriteLine(" L for lemons");
+            Console.WriteLine(" I for ice");
+            Console.WriteLine(" C for cups");
+            Console.WriteLine(" E to exist to Command Center");
             
 
             switch (game.GetUserInput())
@@ -106,6 +106,10 @@ namespace LemonadeStand
                     offerInventory(user, store, game, day, weather);
                     break;
             }
+        }
+        public static void DisplayPrice(Player user)
+        {
+            Console.WriteLine("Price = " + user.Price );
         }
     }
 }
