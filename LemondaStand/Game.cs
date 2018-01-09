@@ -35,7 +35,7 @@ namespace LemonadeStand
             UserInterface.DisplayInstructions();
 
             
-            for (int i = 0; i<= 2; i++)
+            for (int i = 0; i<= 6; i++)
             {
                 //get daily forcast
                 //get daily weather
@@ -44,6 +44,7 @@ namespace LemonadeStand
                 Console.WriteLine(" ");
                 Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature() + " and " + day.GenerateForecast());
                 Console.WriteLine(" ");
+                Console.WriteLine(" Day: " + ( i + 1));
                 Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
                 CommandCenter(user, store, day, weather);
                 Console.WriteLine(" Day change");
@@ -92,6 +93,8 @@ namespace LemonadeStand
                     UserInterface.offerInventory(user, store, this, day, weather);
                     break;
                 case "p":
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Enter price of Lemonade");
                     //set price
                     break;
                 case "r":

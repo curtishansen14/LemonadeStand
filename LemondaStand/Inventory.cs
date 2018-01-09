@@ -9,10 +9,10 @@ namespace LemonadeStand
     public class Inventory
     {
         //member variables
-        private float cups;
-        private float cupsofsugar;
-        private float lemons;
-        private float icecubes;
+        private double cups;
+        private double cupsofsugar;
+        private double lemons;
+        private double icecubes;
 
 
         //constructor
@@ -24,7 +24,7 @@ namespace LemonadeStand
         //member methods 
 
 
-        public float Cups
+        public double Cups
         {
             get
             {
@@ -35,7 +35,7 @@ namespace LemonadeStand
                 cups = value;
             }
         }
-        public float CupsOfSugar
+        public double CupsOfSugar
         {
             get
             {
@@ -46,7 +46,7 @@ namespace LemonadeStand
                 cupsofsugar = value;
             }
         }
-        public float Lemons
+        public double Lemons
         {
             get
             {
@@ -57,7 +57,7 @@ namespace LemonadeStand
                 lemons = value;
             }
         }
-        public float IceCubes
+        public double IceCubes
         {
             get
             {

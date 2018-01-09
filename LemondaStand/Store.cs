@@ -11,37 +11,37 @@ namespace LemonadeStand
         //member variables
 
 
-        private float cupBundleOne;
-        private float cupBundleTwo;
-        private float cupBundleThree;
+        private double cupBundleOne;
+        private double cupBundleTwo;
+        private double cupBundleThree;
 
-        private float sugarBundleOne;
-        private float sugarBundleTwo;
-        private float sugarBundleThree;
+        private double sugarBundleOne;
+        private double sugarBundleTwo;
+        private double sugarBundleThree;
 
-        private float lemonBundleOne;
-        private float lemonBundleTwo;
-        private float lemonBundleThree;
+        private double lemonBundleOne;
+        private double lemonBundleTwo;
+        private double lemonBundleThree;
 
-        private float iceBundleOne;
-        private float iceBundleTwo;
-        private float iceBundleThree;
+        private double iceBundleOne;
+        private double iceBundleTwo;
+        private double iceBundleThree;
 
-        private float cupBundleOnePrice;
-        private float cupBundleTwoPrice;
-        private float cupBundleThreePrice;
+        private double cupBundleOnePrice;
+        private double cupBundleTwoPrice;
+        private double cupBundleThreePrice;
 
-        private float lemonBundleOnePrice;
-        private float lemonBundleTwoPrice;
-        private float lemonBundleThreePrice;
+        private double lemonBundleOnePrice;
+        private double lemonBundleTwoPrice;
+        private double lemonBundleThreePrice;
 
-        private float sugarBundleOnePrice;
-        private float sugarBundleTwoPrice;
-        private float sugarBundleThreePrice;
+        private double sugarBundleOnePrice;
+        private double sugarBundleTwoPrice;
+        private double sugarBundleThreePrice;
 
-        private float iceBundleOnePrice;
-        private float iceBundleTwoPrice;
-        private float iceBundleThreePrice;
+        private double iceBundleOnePrice;
+        private double iceBundleTwoPrice;
+        private double iceBundleThreePrice;
 
 
         //constructor
@@ -49,37 +49,37 @@ namespace LemonadeStand
         {
 
 
-            cupBundleOnePrice = 2.00f;
-            cupBundleTwoPrice = 2.25f;
-            cupBundleThreePrice = 3.00f;
+            cupBundleOnePrice = 2.00;
+            cupBundleTwoPrice = 2.25;
+            cupBundleThreePrice = 3.00;
 
-            cupBundleOne = 50f;
-            cupBundleTwo = 75f;
-            cupBundleThree = 100f;
+            cupBundleOne = 50;
+            cupBundleTwo = 75;
+            cupBundleThree = 100;
 
-            lemonBundleOne = 8f;
-            lemonBundleTwo = 30f;
-            lemonBundleThree = 50f;
+            lemonBundleOne = 8;
+            lemonBundleTwo = 30;
+            lemonBundleThree = 50;
 
-            lemonBundleOnePrice = 2.00f;
-            lemonBundleTwoPrice = 2.25f;
-            lemonBundleThreePrice = 3.00f;
+            lemonBundleOnePrice = 2.00;
+            lemonBundleTwoPrice = 2.25;
+            lemonBundleThreePrice = 3.00;
 
-            sugarBundleOne = 10f;
-            sugarBundleTwo = 15f;
-            sugarBundleThree = 25f;
+            sugarBundleOne = 10;
+            sugarBundleTwo = 15;
+            sugarBundleThree = 25;
 
-            sugarBundleOnePrice = 2.00f;
-            sugarBundleTwoPrice = 2.25f;
-            sugarBundleThreePrice = 3.00f;
+            sugarBundleOnePrice = 2.00;
+            sugarBundleTwoPrice = 2.25;
+            sugarBundleThreePrice = 3.00;
 
-            iceBundleOne = 100f;
-            iceBundleTwo = 250f;
-            iceBundleThree = 500f;
+            iceBundleOne = 100;
+            iceBundleTwo = 250;
+            iceBundleThree = 500;
 
-            iceBundleOnePrice = 2.00f;
-            iceBundleTwoPrice = 2.50f;
-            iceBundleThreePrice = 3.50f;
+            iceBundleOnePrice = 2.00;
+            iceBundleTwoPrice = 2.50;
+            iceBundleThreePrice = 3.50;
 
 
         }

@@ -10,18 +10,20 @@ namespace LemonadeStand
     {
         //member variables
         public Inventory inventory;
-        private float money;
+        private double money;
+        private double price;
 
         //constructor
         public Player()
         {
             inventory = new Inventory();
-            money = 20.00f;
+            money = 20.00;
+            price = 1.00;
 
         }
 
         //member methods 
-        public float Money
+        public double Money
         {
             get
             {
@@ -31,6 +33,18 @@ namespace LemonadeStand
             {
                 money = value;
             }
+        }
+        public double Price
+        {
+            get { return price; }
+            set { price = value; }
+        }   
+           
+        public double setPrice(Game game)
+        {
+            Price = Convert.ToDouble(game.GetUserInput());
+            
+            return Price;
         }
     }
 }
