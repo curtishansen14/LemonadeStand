@@ -9,12 +9,11 @@ namespace LemonadeStand
    public class Game
     {
         //member variables (HAS A)
-        Random rnd = new Random();
+        Random random; 
         Player user;
         Store store;
         Day day;
         Weather weather;
-        private int daysElipsed;
         private string userInput;
 
 
@@ -23,9 +22,9 @@ namespace LemonadeStand
         {
             user = new Player();
             store = new Store();
-            day = new Day(rnd);
-            weather = new Weather(rnd);
-            daysElipsed = 0;
+            day = new Day();
+            weather = new Weather();
+            random = new Random();
         }
 
         //member methods 
@@ -42,10 +41,11 @@ namespace LemonadeStand
                 Console.WriteLine(" ");
                 Console.WriteLine("^^^^^^^Weather Forecast^^^^^^^^^");
                 Console.WriteLine(" ");
-                Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature() + " and " + day.GenerateForecast());
+                Console.WriteLine(" Today's forecast: " + day.GenerateForecastedTemperature() + " and " + day.GenerateForecast(random));
                 Console.WriteLine(" ");
                 Console.WriteLine(" Day: " + ( i + 1));
                 Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+
                 CommandCenter(user, store, day, weather);
                 Console.WriteLine(" Day change");
 
@@ -88,7 +88,7 @@ namespace LemonadeStand
             switch (GetUserInput())
             {
                 case "g":
-                    weather.GetWeather(day);
+                    weather.GetWeather(day, random);
                     Console.WriteLine(" ");
                     Console.WriteLine("----------------------------------------------");
                     Console.WriteLine(" Lets go to market");

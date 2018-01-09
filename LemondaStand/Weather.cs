@@ -12,24 +12,23 @@ namespace LemonadeStand
       
         private double actualWeather;
         private int weatherMultiplier;
-        private Random random;
+
 
         //constructor
-        public Weather(Random rnd)
+        public Weather()
         {
    
             actualWeather = 44;
             weatherMultiplier = 0;
-            random = rnd;
             
         }
 
         //member methods 
 
 
-        public double GetWeather(Day day)
+        public double GetWeather(Day day, Random random)
         {
-            GetWeatherMultiplier();
+            GetWeatherMultiplier(random);
 
             if (weatherMultiplier == 1)
             {
@@ -57,7 +56,7 @@ namespace LemonadeStand
         
 
 
-    public int GetWeatherMultiplier()
+    public int GetWeatherMultiplier(Random random)
     {
         weatherMultiplier = random.Next(1, 2);
         return weatherMultiplier;

@@ -10,19 +10,18 @@ namespace LemonadeStand
     {
         //member variables
         private string skyConditions;
-        private int foreCastedtemperature;
+        private double foreCastedtemperature;
         private Random random;
 
         //constructor
-        public Day(Random rnd)
+        public Day()
         {
-            random = rnd;
-            skyConditions = GenerateForecast();
-            foreCastedtemperature = 0;
+            skyConditions = GenerateForecast(random);
+            foreCastedtemperature = GenerateForecastedTemperature();
         }
 
         //member methods 
-        public string GenerateForecast()
+        public string GenerateForecast(Random random)
         {
             int result;
             List<string> skyConditions = new List<string>();
@@ -47,7 +46,7 @@ namespace LemonadeStand
             get { return skyConditions; }
             set { skyConditions = value; }
         }
-        public int ForecastedTemperature
+        public double ForecastedTemperature
         {
             get { return foreCastedtemperature; }
             set { foreCastedtemperature = value; }
