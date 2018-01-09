@@ -56,12 +56,12 @@ namespace LemonadeStand
             Console.WriteLine("Forecasted Temperature: " + ForecastedTemperature);
         }
 
-        public List<Customer>AddCustomersToList(Weather weather, Day day, Random random)
+        public List<Customer>AddCustomersToList(Weather weather, Day day, Random random, Player user, Inventory inventory)
         {
             List<Customer> Customers = new List<Customer>();
             for (int i = 0; i < 100; i++)
             {
-                Customer customer = new Customer(weather, day, random);
+                Customer customer = new Customer(weather, day, random, user, inventory);
                     Customers.Add(customer);
             }
             return Customers;

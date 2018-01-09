@@ -14,6 +14,7 @@ namespace LemonadeStand
         Store store;
         Day day;
         Weather weather;
+        Inventory inventory;
         private string userInput;
 
 
@@ -23,6 +24,7 @@ namespace LemonadeStand
             random = new Random();
             user = new Player();
             store = new Store();
+            inventory = new Inventory();
             day = new Day(random);
             weather = new Weather();
         }
@@ -72,6 +74,7 @@ namespace LemonadeStand
             Console.WriteLine(" ");
             Console.WriteLine(" Price $" + user.Price);
             Console.WriteLine(" Money $" + user.Money);
+            Console.WriteLine(" Total Profit: $" + (user.Money - 20));
             Console.WriteLine(" ");
             Console.WriteLine(" Recipe:");
             Console.WriteLine(" " + user.LemonsPerCup + " Lemons per a cup");
@@ -95,7 +98,7 @@ namespace LemonadeStand
                     Console.WriteLine(" Today's weather " + weather.ActualWeather + " degrees" );
                     Console.WriteLine(" ");
                     Console.WriteLine("----------------------------------------------");
-                    //call customers aka go to market
+                    day.AddCustomersToList(weather, day, random, user, inventory);
                     return;
                 case "s":
                     UserInterface.offerInventory(user, store, this, day, weather);

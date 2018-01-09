@@ -14,29 +14,31 @@ namespace LemonadeStand
 
 
         //constructor
-        public Customer(Weather weather, Day day, Random random)
+        public Customer(Weather weather, Day day, Random random, Player user, Inventory inventory)
         {
             purchasePoints = NeutralWillingnessToBuy(random);
             GetTemperatureEffect(weather);
             GetConditionsEffect(day);
+            GetPriceEffect(user);
+            BuyingDecision(purchasePoints, user, inventory);
         }
 
         //member methods 
 
         public void BuyCupofLemonade(Player user, Inventory inventory)
         {
-            user.Money = user.Money - user.Price;
+            user.Money = user.Money + user.Price;
             user.inventory.Cups = user.inventory.Cups - 1;
             user.inventory.CupsOfSugar = user.inventory.CupsOfSugar - user.SugarPerCup;
             user.inventory.Lemons = user.inventory.Lemons - user.LemonsPerCup;
             user.inventory.IceCubes = user.inventory.IceCubes - user.IceCubesPerCup;
         }
 
-        public bool BuyingDecision(double purchasePoints, double buyingThreshhold)
+        public bool BuyingDecision(double purchasePoints, Player user, Inventory inventory)
         {
-            if (purchasePoints >= buyingThreshhold)
+            if (purchasePoints >= 75)
             {
-                return true;
+                BuyCupofLemonade(user, inventory);
             }
             return false;
         }
@@ -93,7 +95,25 @@ namespace LemonadeStand
                 
 
         }
+        public void GetPriceEffect(Player user)
+        {
+            if(user.Price > 2)
+            {
+                purchasePoints = purchasePoints - 10;
+                return;
+            }
+            else if (user.Price > 1)
+            {
+                purchasePoints = purchasePoints - 5;
+                return;
+            }
+            else if (user.Price == .25)
+            {
+                purchasePoints = purchasePoints + 15;
+                return;
+            }
 
+        }
 
     }
 }
