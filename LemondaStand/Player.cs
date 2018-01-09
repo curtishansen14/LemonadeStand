@@ -13,12 +13,17 @@ namespace LemonadeStand
         private double money;
         private double price;
 
+
         //constructor
         public Player()
         {
             inventory = new Inventory();
             money = 20.00;
             price = 1.00;
+
+            lemonsPerCup = 1;
+            sugarPerCup = 1;
+            iceCubesPerCup = 2;
 
         }
 
@@ -46,5 +51,55 @@ namespace LemonadeStand
             
             return Price;
         }
+
+
+
+        //member variables
+        private double lemonsPerCup;
+        private double sugarPerCup;
+        private double iceCubesPerCup;
+
+
+        //constructor
+
+
+        //member methods 
+        
+
+
+        public double SetLemonsPerCup(Game game)
+        {
+            LemonsPerCup = Convert.ToDouble(game.GetUserInput());
+            return LemonsPerCup;
+        }
+        public double SetSugarPerCup(Game game)
+        {
+            SugarPerCup = Convert.ToDouble(game.GetUserInput());
+            return SugarPerCup;
+        }
+        public double SetIceCubesPerCup(Game game)
+        {
+            IceCubesPerCup = Convert.ToDouble(game.GetUserInput());
+            return IceCubesPerCup;
+        }
+
+        public double LemonsPerCup
+        {
+            get { return lemonsPerCup; }
+            set { lemonsPerCup = value; }
+        }
+
+        public double SugarPerCup
+        {
+            get { return sugarPerCup; }
+            set { sugarPerCup = value; }
+        }
+
+        public double IceCubesPerCup
+        {
+            get { return iceCubesPerCup; }
+            set { iceCubesPerCup = value; }
+        }
     }
+
 }

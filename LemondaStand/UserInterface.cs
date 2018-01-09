@@ -111,5 +111,42 @@ namespace LemonadeStand
         {
             Console.WriteLine("Price = " + user.Price );
         }
+
+        public static void offerRecipeChange(Player user, Store store, Game game, Day day, Weather weather)
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine(" What would you change?");
+            Console.WriteLine(" S for sugar per cup");
+            Console.WriteLine(" L for lemons per cup");
+            Console.WriteLine(" I for ice per cup");
+            Console.WriteLine(" E to exist to Command Center");
+
+
+            switch (game.GetUserInput())
+            {
+                case "s":
+                    Console.WriteLine("Please Enter desired sugar per cup");
+                    user.SetSugarPerCup(game);
+                    break;
+                case "l":
+                    Console.WriteLine("Please enter desired lemons per cup");
+                    user.SetLemonsPerCup(game);
+                    break;
+                case "i":
+                    Console.WriteLine("Please enter desired ice cubes per cup");
+                    user.SetIceCubesPerCup(game);
+                    break;
+                case "e":
+                    game.CommandCenter(user, store, day, weather);
+                    break;
+                default:
+                    Console.WriteLine("Incorrect input. Please try again.");
+                    Console.WriteLine("Be sure to use lower case");
+                    offerRecipeChange(user, store, game, day, weather);
+                    break;
+            }
+        }
+
+
     }
 }

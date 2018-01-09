@@ -73,9 +73,15 @@ namespace LemonadeStand
             Console.WriteLine(" Price $" + user.Price);
             Console.WriteLine(" Money $" + user.Money);
             Console.WriteLine(" ");
+            Console.WriteLine(" Recipe:");
+            Console.WriteLine(" " + user.LemonsPerCup + " Lemons per a cup");
+            Console.WriteLine(" " + user.IceCubesPerCup + " Ice Cubes per a Cup");
+            Console.WriteLine(" " + user.SugarPerCup + " Sugar per a cup");
+            Console.WriteLine(" ");
             Console.WriteLine(" Press G to begin");
             Console.WriteLine(" Press S to go to the store.");
-            Console.WriteLine(" Press P to set price");
+            Console.WriteLine(" Press P to change price");
+            Console.WriteLine(" Press R to change recipe");
             Console.WriteLine(" *************** ************** *************** ");
             
 
@@ -102,9 +108,12 @@ namespace LemonadeStand
                     Console.WriteLine(" ");
                     CommandCenter(user, store, day, weather);
 
-                    //set price
                     break;
                 case "r":
+                    Console.WriteLine(" ");
+                    Console.WriteLine("");
+                    UserInterface.offerRecipeChange(user, store, this, day, weather);
+                    CommandCenter(user, store, day, weather);
                     // set recipe
                     break;
                 default:
