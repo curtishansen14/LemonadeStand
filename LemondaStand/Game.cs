@@ -20,11 +20,11 @@ namespace LemonadeStand
         //constructor
         public Game()
         {
+            random = new Random();
             user = new Player();
             store = new Store();
             day = new Day(random);
             weather = new Weather();
-            random = new Random();
         }
 
         //member methods 
