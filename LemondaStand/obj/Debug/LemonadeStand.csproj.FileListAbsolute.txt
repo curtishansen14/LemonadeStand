@@ -4,3 +4,7 @@ C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\bi
 C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\obj\Debug\LemonadeStand.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\obj\Debug\LemondaStand.exe
 C:\Users\User\Documents\Visual Studio 2015\Projects\LemondaStand\LemondaStand\obj\Debug\LemondaStand.pdb
+C:\Users\User\documents\visual studio 2015\Projects\LemondaStand\LemondaStand\bin\Debug\EntityFramework.dll
+C:\Users\User\documents\visual studio 2015\Projects\LemondaStand\LemondaStand\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\documents\visual studio 2015\Projects\LemondaStand\LemondaStand\bin\Debug\EntityFramework.xml
+C:\Users\User\documents\visual studio 2015\Projects\LemondaStand\LemondaStand\bin\Debug\EntityFramework.SqlServer.xml

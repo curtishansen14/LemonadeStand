@@ -4,6 +4,7 @@ namespace LemondeStand
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    
 
     public partial class DataModel : DbContext
     {

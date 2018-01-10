@@ -53,6 +53,7 @@ namespace LemonadeStand
 
             }
 
+            
             user.ConvertDoubleToDecimal();
 
             using (var db = new LemondeStand.DataModel())
@@ -62,6 +63,15 @@ namespace LemonadeStand
                 db.SaveChanges();
                 
             }
+
+            Console.WriteLine(" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+            Console.WriteLine(" ");
+            Console.WriteLine(" Congratulations! You made it through the week.");
+            Console.WriteLine(" " + user.HighScoreMoney + " was added to high scores table");
+            Console.WriteLine(" ");
+            Console.WriteLine(" Press Enter to exist");
+            Console.WriteLine(" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+            Console.ReadKey();
 
         }
 
