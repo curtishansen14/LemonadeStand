@@ -8,6 +8,10 @@ namespace LemonadeStand
 {
     public class Player
     {
+        //SOLID Principle: Open/Closed 
+        //New functionality can be added to player class without changing functionality of existing code
+        
+
         //member variables
         public Inventory inventory;
         private double money;

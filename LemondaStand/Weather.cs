@@ -8,6 +8,11 @@ namespace LemonadeStand
 {
     public class Weather
     {
+
+        //SOLID Example: Single Responsibility 
+        //This class calculates weather as a function of foreceast and nothing else. 
+
+
         //member variables
       
         private double actualWeather;
