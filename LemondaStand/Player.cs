@@ -16,6 +16,7 @@ namespace LemonadeStand
         public Inventory inventory;
         private double money;
         private double price;
+        private decimal highScoreMoney;
 
 
         //constructor
@@ -56,7 +57,17 @@ namespace LemonadeStand
             return Price;
         }
 
+        public void ConvertDoubleToDecimal()
+        {
+            highScoreMoney = Convert.ToDecimal(this.Money);
+        }
 
+
+        public decimal HighScoreMoney
+        {
+            get { return highScoreMoney; }
+            set { highScoreMoney = value; }
+        }
 
         //member variables
         private double lemonsPerCup;

@@ -53,6 +53,15 @@ namespace LemonadeStand
 
             }
 
+            user.ConvertDoubleToDecimal();
+
+            using (var db = new LemondeStand.DataModel())
+            {
+                db.HighScores.Add(new LemondeStand.HighScore()
+                { High_Scores = user.HighScoreMoney});
+                db.SaveChanges();
+                
+            }
 
         }
 
